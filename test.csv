@@ -1,0 +1,5 @@
+name,age,"date of birth",email,old
+"john goodman",68,"june 2, 1957",jgoodman@gmail.com,True
+"George Washington",268a,"Jan 3, 1757",olGeorge@hotmail.com,True
+Sandman,12000,"Jan 1, 0000",sandman@gmail.com,True
+"Hulk Hogan",54,"October 15, 1959",yeahBrother@yahoo.com,TrueFalse
