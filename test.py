@@ -10,11 +10,5 @@ class testSchema(Schema):
     email = Schema.field("email", [StringValidator()])
     old = Schema.field("old", [BooleanValidator()])
 
-t = testSchema()
-print(t.schema)
-
 a = Anubis("test.csv", ",", testSchema())
-#print(f"column_map: {a.column_map}")
 a.read_csv()
-
-# setting up the cli is going to require Click + Setuptools... yikes.

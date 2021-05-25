@@ -29,6 +29,18 @@ class IntegerValidator(Validator):
             return False
 
 
+class FloatValidator(Validator):
+    def __init__(self):
+        pass
+
+    def evaluate(self, value: str) -> bool:
+        try:
+            v = float(value)
+            return True
+        except ValueError:
+            return False
+
+
 class BooleanValidator(Validator):
     def __init__(self):
         self.vals = ["True", "true", "False", "false"] # might want to be more explicit because FaLSE or trUe is odd formatting...
