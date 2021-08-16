@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 class Validator():
     def __init__(self):
         pass
@@ -43,6 +46,7 @@ class FloatValidator(Validator):
 
 class BooleanValidator(Validator):
     def __init__(self):
+        super().__init__()
         self.vals = ["True", "true", "False", "false"] # might want to be more explicit because FaLSE or trUe is odd formatting...
 
     # boolean is goofy. anything with a value, event an empty string, will be truthy so this almost always evaluates to true
@@ -56,6 +60,18 @@ class BooleanValidator(Validator):
         #     return True
         # except ValueError:
         #     return False
+
+
+class DateTimeValidator(Validator):
+    def __init__(self):
+        pass
+
+    def evaluate(self, value: str) -> bool:
+        try:
+            v = datetime.strptime(value, '%B %d, %Y')
+            return True
+        except ValueError:
+            return False
     
 
 """
