@@ -12,7 +12,7 @@ class Validator():
 
 class StringValidator(Validator):
     def __init__(self):
-        pass
+        super().__init__()
 
     # by default, just about everything is going to evaluate properly to a string with additional conditions applied to the string...
     def evaluate(self, value: str) -> bool:
@@ -21,7 +21,7 @@ class StringValidator(Validator):
 
 class IntegerValidator(Validator):
     def __init__(self):
-        pass
+        super().__init__()
 
     def evaluate(self, value: str) -> bool:
         # Python is always going to evaluate :value as a string because it's coming from the CSV so, catch an error during a simple cast operation:
@@ -34,7 +34,7 @@ class IntegerValidator(Validator):
 
 class FloatValidator(Validator):
     def __init__(self):
-        pass
+        super().__init__()
 
     def evaluate(self, value: str) -> bool:
         try:
@@ -64,7 +64,7 @@ class BooleanValidator(Validator):
 
 class DateTimeValidator(Validator):
     def __init__(self):
-        pass
+        super().__init__()
 
     def evaluate(self, value: str) -> bool:
         try:
